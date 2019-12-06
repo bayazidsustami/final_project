@@ -1,17 +1,17 @@
 FILE 		= COBA1
 
-INCLUDE 	= 	-I./ \
+INC 	= 	-I./ \
 				-I"/usr/include/opencv2" \
 				-I"/usr/local/include"
 				
 
 LIB 		=		-L"/usr/include/opencv2" -lopencv_core -lopencv_highgui -lopencv_imgproc \
-				-L"/usr/local/lib" -lfftw3f03
+				-L "/usr/local/lib" -l fftw3f
 				
 .PHONY: clean
 
 %: %.cpp
-	g++ -g $(INCLUDE) $(LIB) -o $@ $<
+	g++ -o $@ $< $(INC) $(LIB) 
 
 txt:$(FILE).exe
 	./$(FILE)>output.txt
