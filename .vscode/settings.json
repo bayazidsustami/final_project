@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*html": "html",
+        "*.css": "css",
+        "atomic": "cpp",
+        "cstring": "cpp",
+        "__string": "cpp",
+        "memory": "cpp"
+    }
+}
